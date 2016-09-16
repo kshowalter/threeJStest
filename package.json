@@ -45,12 +45,7 @@
     "socket.io": "latest",
     "socket.io-client": "latest",
     "express": "latest",
-    "lowdb": "latest",
-
-    "marked": "latest",
-    "ampersand-router": "latest",
-    "ampersand-state": "latest",
-
+    "lowdb": "latest"
 
   },
   "devDependencies": {
@@ -62,5 +57,5 @@
     "babel-preset-es2015": "latest",
     "webpack": "latest",
     "webpack-dev-server": "latest"
-  },
+  }
 }

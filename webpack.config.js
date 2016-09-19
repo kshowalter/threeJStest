@@ -2,7 +2,9 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './client/app.js',
+  entry: {
+    app: './client/app.js',
+  },
   output: {
     path: './public/',
     filename: '[name].js'
@@ -29,7 +31,7 @@ module.exports = {
         query: {
           // https://github.com/babel/babel-loader#options
           cacheDirectory: true,
-          presets: ['es2015', 'react']
+          presets: ['es2015']
         }
       }
     ]

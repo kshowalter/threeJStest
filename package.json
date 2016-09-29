@@ -47,7 +47,10 @@
     "socket.io": "latest",
     "socket.io-client": "latest",
     "express": "latest",
-    "lowdb": "latest"
+    "lowdb": "latest",
+
+    "passport": "latest",
+    "passport-local": "latest"
 
   },
   "devDependencies": {

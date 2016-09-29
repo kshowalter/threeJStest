@@ -16,10 +16,19 @@ g.path = __dirname;
 g.userId = false;
 
 socket.on('connect', function(){
-  socket.on('connected', function(userId){
+  var userId = sessionStorage.getItem('userId');
+  console.log('iAm', userId);
+  socket.emit('iAm', userId);
 
+  socket.on('youAre', function(serveSaysUserId){
+    if( userId !== serveSaysUserId ){
+      userId = serveSaysUserId;
+      sessionStorage.setItem('userId', userId);
+      console.log('i am', userId);
+    } else {
+      console.log('userId confirmed');
+    }
 
-    console.log('userId', userId);
     g.userId = userId;
     socket.on('server_says', function(msg){
       console.log('server_says', msg);
@@ -33,9 +42,11 @@ socket.on('connect', function(){
     socket.emit('db_set', {
       userId: g.userId,
       doc: {
-        status: 'this is a test'
+        status: 'this is a test',
+        number: number
       }
     });
+
 
 
 

@@ -25,7 +25,8 @@ var server = http.createServer(app);
 server.listen(port);
 var db_collections = {
   testObj: {},
-  testArray: []
+  testArray: [],
+  users: []
 };
 
 var db = require('./server/db')('db', db_collections);
